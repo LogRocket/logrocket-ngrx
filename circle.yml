@@ -12,14 +12,8 @@ test:
     - npm run build
 
 deployment:
-  release:
-    tag: /release-[0-9]+\.[0-9]+\.[0-9]+/ # 0.0.1 1.0.1 etc
-    owner: LogRocket
-    commands:
-      - rm -rf dist/__specs__
-      - npm publish
   beta:
-    tag: /beta-[0-9]+\.[0-9]+\.[0-9]+/ # 0.0.1 1.0.1 etc
+    tag: /beta-.+/
     owner: LogRocket
     commands:
-      - npm publish --tag beta
+      - npm publish --tag $CIRCLE_TAG
