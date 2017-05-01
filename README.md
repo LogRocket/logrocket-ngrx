@@ -17,6 +17,7 @@ import LogRocket from 'logrocket';
 // Initialize LogRocket with your app ID
 LogRocket.init(<your_application_id>);
 ```
+
 4. (optional) Add the ngrx middleware.
 
 ```

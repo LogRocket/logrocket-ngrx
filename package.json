@@ -1,6 +1,6 @@
 {
   "name": "logrocket-ngrx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ngrx middleware for [LogRocket](https://logrocket.com/).",
   "main": "dist/index.js",
   "author": "Logrocket <support@logrocket.com> (https://logrocket.com/)",
