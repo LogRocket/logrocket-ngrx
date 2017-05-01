@@ -14,10 +14,10 @@
   ],
   "scripts": {
     "lint": "eslint src/",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist"
   },
   "dependencies": {
-    "babel-runtime": "^6.20.0",
+    "babel-runtime": "^6.20.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -32,6 +32,6 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-mocha": "^4.7.0",
-    "eslint-plugin-react": "^6.4.1",
+    "eslint-plugin-react": "^6.4.1"
   }
 }
