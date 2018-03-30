@@ -8,7 +8,7 @@ dependencies:
 
 test:
   override:
-    - npm install logrocket @ngrx/store
+    - npm run install-peers
     - npm run build
 
 deployment:
