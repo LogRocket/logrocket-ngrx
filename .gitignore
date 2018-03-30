@@ -1,6 +1,5 @@
 dist
 node_modules
-.eslintcache
 .npm
 npm-debug.log*
 .DS_Store

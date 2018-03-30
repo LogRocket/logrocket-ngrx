@@ -2,8 +2,9 @@
   "name": "logrocket-ngrx",
   "version": "0.0.1",
   "description": "ngrx middleware for [LogRocket](https://logrocket.com/).",
-  "main": "dist/index.js",
+  "main": "dist/lib/index.js",
   "author": "Logrocket <support@logrocket.com> (https://logrocket.com/)",
+  "typings": "dist/types/index.d.ts",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,19 +15,13 @@
   ],
   "scripts": {
     "lint": "eslint src/",
-    "build": "babel src --out-dir dist"
+    "build": "tsc --module commonjs"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@ngrx/store": "^5.2.0",
+    "logrocket": "^0.6.10"
   },
   "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-core": "^6.13.0",
-    "babel-eslint": "^7.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-polyfill": "^6.13.0",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-stage-3": "^6.17.0",
-    "eslint": "^3.8.1",
-    "eslint-config-airbnb": "^12.0.0"
+    "typescript": "^2.8.1"
   }
 }
