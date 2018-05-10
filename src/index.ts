@@ -16,19 +16,21 @@ export default function createMetaReducer(
   /** Sanitizer options, same as LogRocket.reduxMiddleware */
   options?: Options
 ): MetaReducer<any> {
-  const reduxMiddleware = logrocket.reduxMiddleware(options);
+  const reduxMiddleware: any = logrocket.reduxMiddleware(options);
+  let currentState: any;
+  let store: any;
 
   // return a metareducer
   return function (reducer: ActionReducer<any>): ActionReducer<any> {
-    let currentState: any;
-    const fakeDispatch: (action: Action) => any = reduxMiddleware({
-      getState: () => currentState,
-    })(() => {});
-
     return function (state: any, action: Action) {
       const newState = reducer(state, action);
       currentState = state;
-      fakeDispatch(action);
+      if (!store) {
+        store = reduxMiddleware({
+          getState: () => currentState,
+        });
+      }
+      store(() => newState)(action);
       return newState;
     };
   };
