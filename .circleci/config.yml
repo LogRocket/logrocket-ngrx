@@ -14,11 +14,11 @@ jobs:
             - npm-cache-{{ checksum "package-lock.json" }}
             - npm-cache-
       - run: npm install
-      - run: npm run install-peers
       - save_cache:
           key: npm-cache-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
+      - run: npm run install-peers
       - run: npm run build
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> .npmrc
       - persist_to_workspace:
