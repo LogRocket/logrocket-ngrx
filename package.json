@@ -1,6 +1,6 @@
 {
   "name": "logrocket-ngrx",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "ngrx middleware for [LogRocket](https://logrocket.com/).",
   "main": "dist/lib/index.js",
   "author": "Logrocket <support@logrocket.com> (https://logrocket.com/)",
@@ -19,9 +19,9 @@
   },
   "peerDependencies": {
     "@ngrx/store": ">=4",
-    "logrocket": "^0.6"
+    "logrocket": ">=2"
   },
   "devDependencies": {
-    "typescript": "^2.8.1"
+    "typescript": "^4.5.5"
   }
 }

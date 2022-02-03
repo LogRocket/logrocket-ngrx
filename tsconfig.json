@@ -13,6 +13,7 @@
     "sourceMap": true,
     "declaration": true,
     "noImplicitAny": true,
+    "skipLibCheck": true,
     "declarationDir": "dist/types",
     "outDir": "dist/lib",
     "typeRoots": [
