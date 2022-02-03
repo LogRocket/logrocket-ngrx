@@ -22,6 +22,6 @@
     "logrocket": ">=2"
   },
   "devDependencies": {
-    "typescript": "^2.8.1"
+    "typescript": "^4.5.5"
   }
 }
